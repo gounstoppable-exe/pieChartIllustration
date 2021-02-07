@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:title" content="Air's Composition with a Piechart in CSS">
+    <meta property="og:description" content="So guys this is a preactise project by GoUnstoppable®️. In this
+    project I have made a Piechart with only HTML & CSS.">
+    <meta property="og:url" content="My GitHub:- https://github.com/UnstoppableYash">
+    <meta name="theme-color" content="#00a8ff">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air's Composition</title>
+</head>
+
+<style>
+    @font-face {
+        src: url(assets/Avant.otf);
+        font-family: Avant;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Avant;
+    }
+
+    html {
+        font-size: 62.5%;
+    }
+
+    :root {
+        --color1: #00a8ff;
+        --color2: #fbc531;
+        --color3: #4cd137;
+        --color4: #9c88ff;
+    }
+
+    .main_div {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .center_div {
+        width: calc(100vw - 30vw);
+        height: calc(100vw - 60vw);
+        border: 0.2rem solid black;
+        -webkit-box-shadow: 0px 3px 30px 0px rgba(50, 50, 49, 0.8);
+        -moz-box-shadow: 0px 3px 30px 0px rgba(50, 50, 49, 0.8);
+        box-shadow: 0px 3px 30px 0px rgba(50, 50, 49, 0.8);
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .center_div h1{
+        font-size: 3.6rem;
+        position: absolute;
+        top: 1%;
+        left: 1%;
+    }
+
+    .piechart{
+        background: radial-gradient(circle closest-side, transparent 100%, #fff 0),
+        conic-gradient(
+            from 90deg,
+            #00a8ff 0,
+            #00a8ff 78%,
+            #fbc531 0,
+            #fbc531 99%,
+            #4cd137 0%,
+            #4cd137 99.93%,
+            #9c88ff 0%,
+            #9c88ff 100%
+        );
+        min-width: 37rem;
+        min-height: 40rem;
+    } 
+
+    .names{
+        font-size: 1.6rem;
+        position: absolute;
+        bottom: 1%;
+        right: 1%;
+        text-align: right;
+    }
+
+    .names p{
+        color: #485460;
+    }
+
+    .names span::after{
+        content: "";
+        display: inline-block;
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+        background: currentColor;
+        margin: 0;
+    }
+
+    .lower_text{
+        font-size: 1.2rem;
+        position: absolute;
+        bottom: 1%;
+        left: 1%;
+    }
+
+    @media screen and (max-width: 1100px) {
+    .piechart{
+        min-width: 30rem;
+        min-height: 35rem;
+    }
+    .center_div h1{
+        font-size: 3.2rem;
+    }
+    .names{
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 934px) {
+    .piechart{
+        min-width: 25rem;
+        min-height: 30rem;
+    }
+    .center_div h1{
+        font-size: 3rem;
+    }
+    .names{
+        font-size: 1.2rem;
+    }
+    .lower_text{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 822px) {
+    .center_div{
+    width: calc(100vw - 30vw);
+    height: calc(100vw - 40vw);
+    }
+    .piechart{
+        min-width: 30rem;
+        min-height: 35rem;
+    }
+}
+
+@media screen and (max-width: 675px) {
+    .center_div h1{
+        font-size: 2.7rem;
+    }
+    .piechart{
+        min-width: 28rem;
+        min-height: 30rem;
+    }
+}
+
+@media screen and (max-width: 609px) {
+    .center_div h1{
+        font-size: 2.2rem;
+    }
+    .names{
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 563px) {
+    .center_div h1{
+        font-size: 2rem;
+    }
+    .piechart{
+        min-width: 23rem;
+        min-height: 25rem;
+    }
+    .names{
+        font-size: 1rem;
+    }
+    .lower_text{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 481px) {
+    .center_div{
+    width: calc(100vw - 25vw);
+    height: calc(100vw - 30vw);
+    }
+}
+
+@media screen and (max-width: 429px) {
+    .center_div{
+    width: calc(100vw - 20vw);
+    height: calc(100vw - 25vw);
+    }
+    .piechart{
+        min-width: 20rem;
+        min-height: 25rem;
+    }
+    .names{
+        font-size: 0,9rem;
+    }
+    .lower_text{
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 397px) {
+    .center_div{
+    width: calc(100vw - 20vw);
+    height: calc(100vw - 10vw);
+    }
+    .piechart{
+        min-width: 22rem;
+        min-height: 25rem;
+    }
+    .names{
+        font-size: 0,9rem;
+    }
+    .lower_text{
+        font-size: 0.8rem;
+    }
+}
+</style>
+
+<body>
+    <div class="main_div">
+        <div class="center_div">
+            <h1>Air's Composition in a PieChart:-</h1>
+            <div class="piechart"></div>
+            <div class="names">
+                <p>
+                    Nitrogen (78%) <span style="color: var(--color1);"></span> <br>
+                    Oxygen (21%) <span style="color: var(--color2);"></span> <br>
+                    Argon (0.93%) <span style="color: var(--color3);"></span> <br>
+                    Others (0.04%) <span style="color: var(--color4);"></span> <br>
+                </p>
+            </div>
+            <p class="lower_text">Design by GoUnstoppable®</p>
+        </div>
+    </div>
+</body>
+
+</html>
